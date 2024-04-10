@@ -1,0 +1,97 @@
+.body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    margin-top: 50px;
+}
+
+
+.container {
+    width: 300px;
+    height: 300px;
+    z-index: 10;
+    animation-name: rotate;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.video {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-me {
+    animation-name: motion;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.video-racoon {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    opacity: 0.5;
+    animation: fall 3s linear infinite;
+}
+
+@media (max-width: 767px) {
+    .video-racoon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.racoons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes motion {
+    0% {
+        transform: scale(.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.9);
+    }
+}
