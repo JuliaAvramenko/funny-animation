@@ -1,4 +1,4 @@
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 5; i++) {
     const snowflake = document.createElement("div");
     const racoon = document.createElement('video');
     racoon.classList.add("video", "video-racoon");
