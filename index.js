@@ -12,3 +12,10 @@ for (let i = 0; i < 5; i++) {
 
 
 }
+
+
+const audio = document.querySelector("#myaudio");
+console.log(audio)
+audio.onplay = function () {
+    audio.muted = false;
+};
